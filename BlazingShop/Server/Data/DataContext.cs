@@ -21,6 +21,8 @@ namespace BlazingShop.Server.Data
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            modelBuilder.HasCharSet("utf8");
+
             modelBuilder.Entity<ProductVariant>()
                 .HasKey(p => new { p.ProductId, p.EditionId });
 
